@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky",
-    "test:browser": "vitest --config=vitest.browser.config.ts"
+    "test": "cross-env VITEST_HEADED=false vitest --config=vitest.config.ts",
+    "test:browser": "cross-env VITEST_HEADED=true vitest --config=vitest.config.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
